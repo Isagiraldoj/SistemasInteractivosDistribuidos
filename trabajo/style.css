@@ -1,0 +1,138 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f9;
+    color: #333;
+    text-align: center;
+}
+
+header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2em;
+    color: #ecf0f1;
+}
+
+.user-info {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+#username {
+    margin: 0;
+    font-size: 1.5em;
+    color: #f1c40f;
+}
+
+#imageContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.character-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 220px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.character-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.character-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-bottom: 1px solid #eee;
+}
+
+.character-card h3 {
+    margin: 15px 0 5px;
+    color: #2c3e50;
+    font-size: 1.2em;
+}
+
+.character-card p {
+    margin: 5px 0;
+    font-size: 0.9em;
+    color: #7f8c8d;
+}
+
+.status-alive {
+    color: #27ae60 !important;
+    font-weight: bold;
+}
+
+.status-dead {
+    color: #e74c3c !important;
+    font-weight: bold;
+}
+
+.status-unknown {
+    color: #f39c12 !important;
+    font-weight: bold;
+}
+
+#switchBtn {
+    padding: 10px 25px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#switchBtn:hover {
+    background-color: #2980b9;
+}
+
+.loading, .error {
+    font-size: 1.2em;
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+.error {
+    color: #e74c3c;
+}
+
+@media (max-width: 768px) {
+    .user-info {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    #imageContainer {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .character-card {
+        width: 90%;
+        max-width: 300px;
+    }
+}
